@@ -55,7 +55,7 @@ Module.symvers
 #
 # Debian directory (make deb-pkg)
 #
-/debian/
+#/debian/
 
 #
 # tar directory (make tar*-pkg)
@@ -117,3 +117,28 @@ all.config
 
 # fetched Android config fragments
 kernel/configs/android-*.cfg
+
+# Droidian
+!.gitmodules
+!debian
+!debian/changelog
+debian/path-override
+debian/*.substvars
+debian/*.debhelper
+debian/files
+debian/debhelper-build-stamp
+debian/linux-*/
+debian/*.postinst
+out/
+#
+# Added by Droidian
+!.circleci/
+#
+# Aded by Berbascum
+#compile-droidian-kernel.sh
+build-berb*.log
+droidian/python
+
+## Folllow patches from droidian dir
+!droidian/patches
+!droidian/**/*.patch
